@@ -78,361 +78,6 @@
             }
         }
     </script>
-
-<style type="text/css">
-
-.bs-slider{
-    overflow: hidden;
-    max-height: 700px;
-    position: relative;
-    background: #000000;
-}
-.bs-slider:hover {
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
-}
-.bs-slider:active {
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
-}
-.bs-slider .bs-slider-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-.bs-slider > .carousel-inner > .item > img,
-.bs-slider > .carousel-inner > .item > a > img {
-    margin: auto;
-    width: 100% !important;
-}
-
-/********************
-*****Slide effect
-**********************/
-
-.fade {
-    opacity: 1;
-}
-.fade .item {
-    top: 0;
-    z-index: 1;
-    opacity: 0;
-    width: 100%;
-    position: absolute;
-    left: 0 !important;
-    display: block !important;
-    -webkit-transition: opacity ease-in-out 1s;
-    -moz-transition: opacity ease-in-out 1s;
-    -ms-transition: opacity ease-in-out 1s;
-    -o-transition: opacity ease-in-out 1s;
-    transition: opacity ease-in-out 1s;
-}
-.fade .item:first-child {
-    top: auto;
-    position: relative;
-}
-.fade .item.active {
-    opacity: 1;
-    z-index: 2;
-    -webkit-transition: opacity ease-in-out 1s;
-    -moz-transition: opacity ease-in-out 1s;
-    -ms-transition: opacity ease-in-out 1s;
-    -o-transition: opacity ease-in-out 1s;
-    transition: opacity ease-in-out 1s;
-}
-
-
-
-
-
-
-/*---------- LEFT/RIGHT ROUND CONTROL ----------*/
-.control-round .carousel-control {
-    top: 47%;
-    opacity: 0;
-    width: 50px;
-    height: 45px;
-    z-index: 100;
-    color: #ffffff;
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    overflow: hidden;
-    line-height: 43px;
-    text-shadow: none;
-    position: absolute;
-    font-weight: normal;
-    background: transparent;
-    -webkit-border-radius: 100px;
-    border-radius: 100px;
-}
-.control-round:hover .carousel-control{
-    opacity: 1;
-}
-.control-round .carousel-control.left {
-    left: 1%;
-}
-.control-round .carousel-control.right {
-    right: 1%;
-}
-.control-round .carousel-control.left:hover,
-.control-round .carousel-control.right:hover{
-    color: #fdfdfd;
-    background: rgba(0, 0, 0, 0.5);
-    border: 0px transparent;
-}
-.control-round .carousel-control.left>span:nth-child(1){
-    left: 45%;
-}
-.control-round .carousel-control.right>span:nth-child(1){
-    right: 45%;
-}
-
-
-
-
-
-/*---------- INDICATORS CONTROL ----------*/
-.indicators-line > .carousel-indicators{
-    right: 45%;
-    bottom: 3%;
-    left: auto;
-    width: 90%;
-    height: 20px;
-    font-size: 0;
-    overflow-x: auto;
-    text-align: right;
-    overflow-y: hidden;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    white-space: nowrap;
-}
-.indicators-line > .carousel-indicators li{
-    padding: 0;
-    width: 15px;
-    height: 15px;
-    border: 1px solid rgb(158, 158, 158);
-    text-indent: 0;
-    overflow: hidden;
-    text-align: left;
-    position: relative;
-    letter-spacing: 1px;
-    background: rgb(158, 158, 158);
-    -webkit-font-smoothing: antialiased;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-right: 5px;
-    -webkit-transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
-    transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
-    z-index: 10;
-    cursor:pointer;
-}
-.indicators-line > .carousel-indicators li:last-child{
-    margin-right: 0;
-}
-.indicators-line > .carousel-indicators .active{
-    margin: 1px 5px 1px 1px;
-    box-shadow: 0 0 0 2px #fff;
-    background-color: transparent;
-    position: relative;
-    -webkit-transition: box-shadow 0.3s ease;
-    -moz-transition: box-shadow 0.3s ease;
-    -o-transition: box-shadow 0.3s ease;
-    transition: box-shadow 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
-
-}
-.indicators-line > .carousel-indicators .active:before{
-    transform: scale(0.5);
-    background-color: #fff;
-    content:"";
-    position: absolute;
-    left:-1px;
-    top:-1px;
-    width:15px;
-    height: 15px;
-    border-radius: 50%;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
-}
-
-
-
-/*---------- SLIDE CAPTION ----------*/
-.slide_style_left {
-    text-align: left !important;
-}
-.slide_style_right {
-    text-align: right !important;
-}
-.slide_style_center {
-    text-align: center !important;
-}
-
-.slide-text {
-    left: 0;
-    top: 25%;
-    right: 0;
-    margin: auto;
-    padding: 10px;
-    position: absolute;
-    text-align: left;
-    padding: 10px 85px;
-    
-}
-
-.slide-text > h1 {
-    
-    padding: 0;
-    color: #ffffff;
-    font-size: 70px;
-    font-style: normal;
-    line-height: 84px;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    display: inline-block;
-    -webkit-animation-delay: 0.7s;
-    animation-delay: 0.7s;
-}
-.slide-text > p {
-    padding: 0;
-    color: #ffffff;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 300;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    -webkit-animation-delay: 1.1s;
-    animation-delay: 1.1s;
-}
-.slide-text > a.btn-default{
-    color: #000;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    margin-right: 10px;
-    text-align: center;
-    padding: 17px 30px;
-    white-space: nowrap;
-    letter-spacing: 1px;
-    display: inline-block;
-    border: none;
-    text-transform: uppercase;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-
-}
-.slide-text > a.btn-primary{
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    margin-left: 10px;
-    text-align: center;
-    padding: 17px 30px;
-    white-space: nowrap;
-    letter-spacing: 1px;
-    background: #00bfff;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-.slide-text > a:hover,
-.slide-text > a:active {
-    color: #ffffff;
-    background: #222222;
-    -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
-}
-
-
-
-
-
-
-/*------------------------------------------------------*/
-/* RESPONSIVE
-/*------------------------------------------------------*/
-
-@media (max-width: 991px) {
-    .slide-text h1 {
-        font-size: 40px;
-        line-height: 50px;
-        margin-bottom: 20px;
-    }
-    .slide-text > p {
-
-        font-size: 18px;
-    }
-}
-
-
-/*---------- MEDIA 480px ----------*/
-@media  (max-width: 768px) {
-    .slide-text {
-        padding: 10px 50px;
-    }
-    .slide-text h1 {
-        font-size: 30px;
-        line-height: 40px;
-        margin-bottom: 10px;
-    }
-    .slide-text > p {
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 20px;
-    }
-    .control-round .carousel-control{
-        display: none;
-    }
-
-}
-@media  (max-width: 480px) {
-    .slide-text {
-        padding: 10px 30px;
-    }
-    .slide-text h1 {
-        font-size: 20px;
-        line-height: 25px;
-        margin-bottom: 5px;
-    }
-    .slide-text > p {
-        font-size: 12px;
-        line-height: 18px;
-        margin-bottom: 10px;
-    }
-    .slide-text > a.btn-default, 
-    .slide-text > a.btn-primary {
-        font-size: 10px;
-        line-height: 10px;
-        margin-right: 10px;
-        text-align: center;
-        padding: 10px 15px;
-    }
-    .indicators-line > .carousel-indicators{
-        display: none;
-    }
-   
-}
-</style>
-
 <script type="text/javascript">
 var d = new Date();
 
@@ -473,6 +118,361 @@ var x = setInterval(function() {
      
 }, 1000);
 </script>
+<style type="text/css">
+
+  .bs-slider{
+      overflow: hidden;
+      max-height: 700px;
+      position: relative;
+      background: #000000;
+  }
+  .bs-slider:hover {
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+  }
+  .bs-slider:active {
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+  }
+  .bs-slider .bs-slider-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+  }
+  .bs-slider > .carousel-inner > .item > img,
+  .bs-slider > .carousel-inner > .item > a > img {
+      margin: auto;
+      width: 100% !important;
+  }
+  
+  /********************
+  *****Slide effect
+  **********************/
+  
+  .fade {
+      opacity: 1;
+  }
+  .fade .item {
+      top: 0;
+      z-index: 1;
+      opacity: 0;
+      width: 100%;
+      position: absolute;
+      left: 0 !important;
+      display: block !important;
+      -webkit-transition: opacity ease-in-out 1s;
+      -moz-transition: opacity ease-in-out 1s;
+      -ms-transition: opacity ease-in-out 1s;
+      -o-transition: opacity ease-in-out 1s;
+      transition: opacity ease-in-out 1s;
+  }
+  .fade .item:first-child {
+      top: auto;
+      position: relative;
+  }
+  .fade .item.active {
+      opacity: 1;
+      z-index: 2;
+      -webkit-transition: opacity ease-in-out 1s;
+      -moz-transition: opacity ease-in-out 1s;
+      -ms-transition: opacity ease-in-out 1s;
+      -o-transition: opacity ease-in-out 1s;
+      transition: opacity ease-in-out 1s;
+  }
+  
+  
+  
+  
+  
+  
+  /*---------- LEFT/RIGHT ROUND CONTROL ----------*/
+  .control-round .carousel-control {
+      top: 47%;
+      opacity: 0;
+      width: 50px;
+      height: 45px;
+      z-index: 100;
+      color: #ffffff;
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      overflow: hidden;
+      line-height: 43px;
+      text-shadow: none;
+      position: absolute;
+      font-weight: normal;
+      background: transparent;
+      -webkit-border-radius: 100px;
+      border-radius: 100px;
+  }
+  .control-round:hover .carousel-control{
+      opacity: 1;
+  }
+  .control-round .carousel-control.left {
+      left: 1%;
+  }
+  .control-round .carousel-control.right {
+      right: 1%;
+  }
+  .control-round .carousel-control.left:hover,
+  .control-round .carousel-control.right:hover{
+      color: #fdfdfd;
+      background: rgba(0, 0, 0, 0.5);
+      border: 0px transparent;
+  }
+  .control-round .carousel-control.left>span:nth-child(1){
+      left: 45%;
+  }
+  .control-round .carousel-control.right>span:nth-child(1){
+      right: 45%;
+  }
+  
+  
+  
+  
+  
+  /*---------- INDICATORS CONTROL ----------*/
+  .indicators-line > .carousel-indicators{
+      right: 45%;
+      bottom: 3%;
+      left: auto;
+      width: 90%;
+      height: 20px;
+      font-size: 0;
+      overflow-x: auto;
+      text-align: right;
+      overflow-y: hidden;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 1px;
+      white-space: nowrap;
+  }
+  .indicators-line > .carousel-indicators li{
+      padding: 0;
+      width: 15px;
+      height: 15px;
+      border: 1px solid rgb(158, 158, 158);
+      text-indent: 0;
+      overflow: hidden;
+      text-align: left;
+      position: relative;
+      letter-spacing: 1px;
+      background: rgb(158, 158, 158);
+      -webkit-font-smoothing: antialiased;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      margin-right: 5px;
+      -webkit-transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
+      transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
+      z-index: 10;
+      cursor:pointer;
+  }
+  .indicators-line > .carousel-indicators li:last-child{
+      margin-right: 0;
+  }
+  .indicators-line > .carousel-indicators .active{
+      margin: 1px 5px 1px 1px;
+      box-shadow: 0 0 0 2px #fff;
+      background-color: transparent;
+      position: relative;
+      -webkit-transition: box-shadow 0.3s ease;
+      -moz-transition: box-shadow 0.3s ease;
+      -o-transition: box-shadow 0.3s ease;
+      transition: box-shadow 0.3s ease;
+      -webkit-transition: background-color 0.3s ease;
+      -moz-transition: background-color 0.3s ease;
+      -o-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
+  
+  }
+  .indicators-line > .carousel-indicators .active:before{
+      transform: scale(0.5);
+      background-color: #fff;
+      content:"";
+      position: absolute;
+      left:-1px;
+      top:-1px;
+      width:15px;
+      height: 15px;
+      border-radius: 50%;
+      -webkit-transition: background-color 0.3s ease;
+      -moz-transition: background-color 0.3s ease;
+      -o-transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
+  }
+  
+  
+  
+  /*---------- SLIDE CAPTION ----------*/
+  .slide_style_left {
+      text-align: left !important;
+  }
+  .slide_style_right {
+      text-align: right !important;
+  }
+  .slide_style_center {
+      text-align: center !important;
+  }
+  
+  .slide-text {
+      left: 0;
+      top: 25%;
+      right: 0;
+      margin: auto;
+      padding: 10px;
+      position: absolute;
+      text-align: left;
+      padding: 10px 85px;
+      
+  }
+  
+  .slide-text > h1 {
+      
+      padding: 0;
+      color: black;
+      font-size: 90px;
+      font-style: Georgia;
+      line-height: 84px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+      display: inline-block;
+      -webkit-animation-delay: 0.7s;
+      animation-delay: 0.7s;
+  }
+  .slide-text > p {
+      padding: 0;
+      color: #ffffff;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      letter-spacing: 1px;
+      -webkit-animation-delay: 1.1s;
+      animation-delay: 1.1s;
+  }
+  .slide-text > a.btn-default{
+      color: #000;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      margin-right: 10px;
+      text-align: center;
+      padding: 17px 30px;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      display: inline-block;
+      border: none;
+      text-transform: uppercase;
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  
+  }
+  .slide-text > a.btn-primary{
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 15px;
+      margin-left: 10px;
+      text-align: center;
+      padding: 17px 30px;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      background: #00bfff;
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: none;
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  .slide-text > a:hover,
+  .slide-text > a:active {
+      color: #ffffff;
+      background: #222222;
+      -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+      transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+  
+  
+  
+  
+  
+  
+  /*------------------------------------------------------*/
+  /* RESPONSIVE
+  /*------------------------------------------------------*/
+  
+  @media (max-width: 991px) {
+      .slide-text h1 {
+          font-size: 40px;
+          line-height: 50px;
+          margin-bottom: 20px;
+      }
+      .slide-text > p {
+  
+          font-size: 18px;
+      }
+  }
+  
+  
+  /*---------- MEDIA 480px ----------*/
+  @media  (max-width: 768px) {
+      .slide-text {
+          padding: 10px 50px;
+      }
+      .slide-text h1 {
+          font-size: 30px;
+          line-height: 40px;
+          margin-bottom: 10px;
+      }
+      .slide-text > p {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 20px;
+      }
+      .control-round .carousel-control{
+          display: none;
+      }
+  
+  }
+  @media  (max-width: 480px) {
+      .slide-text {
+          padding: 10px 30px;
+      }
+      .slide-text h1 {
+          font-size: 20px;
+          line-height: 25px;
+          margin-bottom: 5px;
+      }
+      .slide-text > p {
+          font-size: 12px;
+          line-height: 18px;
+          margin-bottom: 10px;
+      }
+      .slide-text > a.btn-default, 
+      .slide-text > a.btn-primary {
+          font-size: 10px;
+          line-height: 10px;
+          margin-right: 10px;
+          text-align: center;
+          padding: 10px 15px;
+      }
+      .indicators-line > .carousel-indicators{
+          display: none;
+      }
+     
+  }
+  </style>
+  
+  
 
 <style type="text/css">
   
@@ -505,76 +505,78 @@ var x = setInterval(function() {
 
 
 <style>
-  * {box-sizing: border-box;}
-  .img-magnifier-container {
-    position:relative;
-  }
-  .img-magnifier-glass {
-    position: absolute;
-    border: 3px solid #000;
-    border-radius: 50%;
-    cursor: none;
-    /*Set the size of the magnifier glass:*/
-    width: 100px;
-    height: 100px;
-  }
-  </style>
-  <script>
-  function magnify(imgID, zoom) {
-    var img, glass, w, h, bw;
-    img = document.getElementById(imgID);
-    /*create magnifier glass:*/
-    glass = document.createElement("DIV");
-    glass.setAttribute("class", "img-magnifier-glass");
-    /*insert magnifier glass:*/
-    img.parentElement.insertBefore(glass, img);
-    /*set background properties for the magnifier glass:*/
-    glass.style.backgroundImage = "url('" + img.src + "')";
-    glass.style.backgroundRepeat = "no-repeat";
-    glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-    bw = 3;
-    w = glass.offsetWidth / 2;
-    h = glass.offsetHeight / 2;
-    /*execute a function when someone moves the magnifier glass over the image:*/
-    glass.addEventListener("mousemove", moveMagnifier);
-    img.addEventListener("mousemove", moveMagnifier);
-    /*and also for touch screens:*/
-    glass.addEventListener("touchmove", moveMagnifier);
-    img.addEventListener("touchmove", moveMagnifier);
-    function moveMagnifier(e) {
-      var pos, x, y;
-      /*prevent any other actions that may occur when moving over the image*/
-      e.preventDefault();
-      /*get the cursor's x and y positions:*/
-      pos = getCursorPos(e);
-      x = pos.x;
-      y = pos.y;
-      /*prevent the magnifier glass from being positioned outside the image:*/
-      if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
-      if (x < w / zoom) {x = w / zoom;}
-      if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
-      if (y < h / zoom) {y = h / zoom;}
-      /*set the position of the magnifier glass:*/
-      glass.style.left = (x - w) + "px";
-      glass.style.top = (y - h) + "px";
-      /*display what the magnifier glass "sees":*/
-      glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-    }
-    function getCursorPos(e) {
-      var a, x = 0, y = 0;
-      e = e || window.event;
-      /*get the x and y positions of the image:*/
-      a = img.getBoundingClientRect();
-      /*calculate the cursor's x and y coordinates, relative to the image:*/
-      x = e.pageX - a.left;
-      y = e.pageY - a.top;
-      /*consider any page scrolling:*/
-      x = x - window.pageXOffset;
-      y = y - window.pageYOffset;
-      return {x : x, y : y};
-    }
-  }
-  </script>
+/* The outermost element*/
+.header-wrapper {
+  overflow: hidden;
+  width:100%;
+  height:auto;
+  text-align:center;
+}
+
+.zoominheader {
+  width:100%;
+  height:auto;
+  text-align:center;
+
+  background-size: auto;
+  background-attachment: fixed;
+  background-repeat: repeat;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-animation: zoomin 20s ease-in infinite;
+  animation: zoomin 10s ease-in infinite;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+}
+
+/* The innermost element*/
+.zoomoutheader {
+  width:100%;
+  height:auto;
+  text-align:center;
+  background: none;
+  -webkit-animation: zoomout 20s ease-in infinite;
+  animation: zoomout 10s ease-in infinite;
+  transition: all .50s ease-in-out;
+  overflow: hidden;
+}
+
+
+
+/* Zoom in Keyframes */
+@-webkit-keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomin {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+} /*End of Zoom in Keyframes */
+
+/* Zoom out Keyframes */
+@-webkit-keyframes zoomout {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}
+@keyframes zoomout {
+    0% {transform: scale(1);}
+  50% {transform: scale(0.67);}
+  100% {transform: scale(1);}
+}/*End of Zoom out Keyframes */
+
+/*Style for the text*/
+.text{
+  color:red;
+  font-weight:bold; 
+}
+</style>
+
+  
 
 	</head>
 	<body onload="InitMap();">
@@ -602,8 +604,8 @@ var x = setInterval(function() {
 
     <nav class="navbar navbar-expand-lg navbar-dark probootstrap_navbar" id="probootstrap-navbar">
       <div class="container">
-        <a class="navbar-brand" href="home.html"><img src="assets/images/logo-top.png" class="img-responsive"></a>
-        <a class="navbar-brand" href="home.html">ABHINANDHANA</a>
+        <a class="navbar-brand" href="#section-home"><img src="assets/images/logo-top1.png" style="width: 255px; height:46px " class="img-responsive"></a>
+        
         
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-menu" aria-controls="probootstrap-menu" aria-expanded="false" aria-label="Toggle navigation">
           <span><i class="ion-navicon"></i></span>
@@ -617,7 +619,7 @@ var x = setInterval(function() {
             <li class="nav-item"><a class="nav-link" href="#section-portfolio">portfolio</a></li>
             <li class="nav-item"><a class="nav-link" href="#section-clients">clients</a></li>
             <li class="nav-item"><a class="nav-link" href="#section-services">Services</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#section-acheivement">ACHIEVEMENTS</a></li>            
+         <!--         <li class="nav-item"><a class="nav-link" href="#section-acheivement">ACHIEVEMENTS</a></li>      -->      
             <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
           </ul>
         </div>
@@ -631,96 +633,19 @@ var x = setInterval(function() {
     </section>
 
 
-   <section id="section-home">
-     <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false" >
-
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
-                <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper For Slides -->
-            <div class="carousel-inner" role="listbox">
-
-                <!-- Third Slide -->
-                <div class="item active img-magnifier-container">
-            
-                    <!-- Slide Background -->
-                    <img id="myimage" src="assets/images/img_fjords.png"  alt="image"  class="slide-image"/>
-                    <div class="bs-slider-overlay"></div>
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="slide-text slide_style_left">
-
-                                
 
 
-                                
-                                 
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Slide -->
-
-                <!-- Second Slide -->
-                <div class="item">
-
-                    <!-- Slide Background -->
-                    <img src="assets/images/slide-2.jpg" alt="image"  class="slide-image"/>
-                    <div class="bs-slider-overlay"></div>
-                    <!-- Slide Text Layer -->
-                    <div class="slide-text slide_style_center">
-                       
-                        <h1 data-animation="animated zoomInRight" id="demo"></h1>
-                        <a href="about.html"  class="btn btn-primary" data-animation="animated fadeInLeft">About Us</a>
-                        <a href="contact.html"   class="btn btn-primary" data-animation="animated fadeInRight">Contact US</a>
-                    </div>
-                </div>
-                <!-- End of Slide -->
-
-                <!-- Third Slide -->
-                <div class="item">
-
-                    <!-- Slide Background -->
-                    <img src="assets/images/slide-3.jpg" alt="Bootstrap Touch Slider"  class="slide-image"/>
-                    <div class="bs-slider-overlay"></div>
-                    <!-- Slide Text Layer -->
-                    <div class="slide-text slide_style_center">
-                       <h1 data-animation="animated zoomInLeft">It's Not About Ideas<br>It's About Making Ideas Happen.</h1>
-                        
-
-                    </div>
-                </div>
-                <!-- End of Slide -->
-
-
-            </div><!-- End of Wrapper For Slides -->
-
-            <!-- Left Control -->
-            <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
-                <span class="fa fa-angle-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-
-            <!-- Right Control -->
-            <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
-                <span class="fa fa-angle-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-
+    
+      <div id="section-home"  class=" img-responsive header-wrapper">
+        <div class="zoominheader">
+          <div class="zoomoutheader">
+              <img src="assets/images/img_fjords.jpg" style="height: auto; width: 100% ">
+         
+          </div>
         </div>
-
-
-
-          
-        </div>
-      
-    </section>
+      </div>
+    
 
 
 
@@ -774,17 +699,41 @@ Moving forward, we look to continue to generate compelling, focused and well res
 
  
     <!-- END section -->
+<section  class="row text-center probootstrap_section"  id="section-about">
+	<div class="container">
+        <div class="row text-center mb-5 probootstrap-animate">
+          <div class="col-md-12">
+            <h1 class="border-bottom probootstrap-section-heading">ABOUT-US</h1>
+         
+ 
+                  	<p class="lead mb-4" align="justify" style="color: black">
+	Abhinandana Media Services is an INS accredited agency with business operations spread in the two states of Andhra Pradesh and Telengana. With our Corporate Office at Vijayawada we have 15 branches in both the states. Our clientele come from a spectrum of industries with more than 1500 satisfied customers as on today.
+We have expanded gradually for over a period of 20 years and now we are scaling heights by providing services to the organizations that have operations across the country. 
+Our advertisement strategies are very popular in both Andhra Pradesh and Telengana through print and electronic media i.e., Telugu and English newspapers and TV channels respectively. 
+With two decades of experience and high volume of business in Andhra Pradesh and Telengana, we have an annual turnover of 20 crore rupees. The majority of our customers are repeat customers with more than 70% of our business.  
 
+
+</p>
+
+      </div> </div>
+        </div>
     
-    
-    <section class="probootstrap-section-half d-md-flex" id="section-about">
+   
+
+
+
+
+
+
+
+    <section class="probootstrap-section-half d-md-flex" >
 
 
       <div class="probootstrap-inner probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(assets/images/vision.jpg)"></div>
       <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
           <h2 class="heading mb-4" style="color: #000080" ;><b>VISION</b></h2>
-          <p class="lead mb-4" align="justify " style="color: black">To position ourselves as a customer-focused company that remains dedicated to providing our clients with results-oriented advertising, and total marketing support that benefit our clients.</p>
+          <p class="lead mb-4" align="justify " style="color: black">To position ourselves as the most preferred customer-focused and result-oriented advertising company for marketing our clients’ products and services.</p>
 
 
 
@@ -799,18 +748,22 @@ Moving forward, we look to continue to generate compelling, focused and well res
       <div class="probootstrap-text order-1">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInLeft">
           <h2 class="heading mb-4" style="color: #000080"><b>MISSION</b></h2>
-          <p class="lead mb-4" align="justify" style="color: black">To provide consistent results-oriented solutions and continually promote quality improvement, and excellence in all phases of business, in accordance with the highest standards of quality and efficiency.</p>
+          <p class="lead mb-4" align="justify" style="color: black">To provide cutting-edge solutions to our clients focusing on quality improvement, and excellence in business</p>
         </div>
       </div>
     </section>
     <!-- END section -->
 
     <section class="probootstrap-section-half d-md-flex">
-      <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(assets/images/strengths.png)"></div>
+      <div class="probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(assets/images/strengths.jpg)"></div>
       <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
           <h2 class="heading mb-4" style="color: #000080"><b>STRENGTHS</b></h2>
-          <p class="lead mb-4" align="justify" style="color: black">Our strength lies in creating value by using that power to build connections between clients and their audiences.Though we take time to understand your business culture and requirements,we ensure that we undertake all steps to realize your requirements while you can focus on the business.</p>
+          <p class="lead mb-4" align="justify" style="color: black">Our strength lies in:<br>
+•	Creating value to the customers of our clients with our insightful marketing solutions<br>
+•	Understanding the ever changing trends in marketing and varying requirements of our clients<br>
+•	Enabling our clients to focus on their business leaving us the responsibility of their marketing<br>
+</p>
              
 
 
@@ -1809,9 +1762,10 @@ Moving forward, we look to continue to generate compelling, focused and well res
       
            
 
-  <section class="probootstrap_section" id="section-services">
+  <section class=" probootstrap_section" id="section-services">
+      <div class="col-md-12">
+    <h1 class="border-bottom probootstrap-section-heading">SERVICES</h1>
     
-
     <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false" >
 
       <!-- Indicators -->
@@ -1835,7 +1789,7 @@ Moving forward, we look to continue to generate compelling, focused and well res
                   <div class="row">
                       <div class="slide-text slide_style_left">
 
-                        <h1 data-animation="animated zoomInLeft">MEDIA <br>SERVICES</h1>
+                        <h1 data-animation="animated zoomInLeft"><b>MEDIA <br>SERVICES</b></h1>
                            
          
                        
@@ -1858,48 +1812,35 @@ Moving forward, we look to continue to generate compelling, focused and well res
       <!-- Left Control -->
      
 
-  </div>
-
-
-
-    
-  </div>
-
-
-
-     
-      <div class="container">
-        
-        <div class="row text-center mb-5 probootstrap-animate">
-          <div class="col-md-12">
-            <h3 class=" border-bottom probootstrap-section-heading">NEWSPAPER / MAGAZINE ADVERTISEMENT</h3>
-          
-       
- <p class="lead mb-4" align="justify">Despite the onslaught of online media, thousands of people still continue to read newspapers daily. The reading habit trend does not show any signs of decline and instead seems to be growing higher up. This is what makes newspaper and magazine an attractive choice for reaching the largest collection of people.
-
-A well-conceived powerful advertising campaign in regional newspapers with the right words and design layout has the power to target targeted geographic audience and influence them instantly. Further, print advertising offers a fast turnaround in a country like India and enables you to have the advertisement you want, in the section you want, within a few days.
-
-Abhinandana Media Services with its holistic approach and fully integrated capabilities, provides a range of quality newspaper / magazine advertisement solutions. Our ability to understand consumer behaviors can help you design and implement targeted advertisements for readers of popular newspapers.
-</p>
-
-
-      </div></div>
-        </div>
-
+  </div></div>
+<br>
 
       <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
           <div class="col-md-12">
-            <h3 class="border-bottom probootstrap-section-heading">TELEVISION / RADIO ADVERTISEMENT</h3>
+            <h3 class="border-bottom probootstrap-section-heading">NEWSPAPER / MAGAZINE ADVERTISEMENT</h3>
          
        
- <p class="lead mb-4" align="justify">The great and unique thing about Television & Radio advertising is that you can target an audience which isn’t actively looking for your product or service, but you still get to attract their attention.
+ <p class="lead mb-4" align="justify">Our presence in print media is ever growing despite the phenomenal growth of online media. The habit of reading newspapers has not shown any signs of downward trend. Even today the print media is the main medium for reaching the largest number of customers whatever business you are doing.<br><br>
 
-A creative television and radio advertisement can achieve great results, provided the message is up-to-date and consistent. Further they are very efficient for they rely heavily on the fact that the audience is actively looking for your product or service.
 
-We at Abhinandana offer result-oriented innovative television and radio advertisement solutions that have seen the best results for our clients with a focused effort.
+Our expertise in designing attractive print media advertisements have won many customers to our clients.  Our well-thought out advertisement strategies reach the potential customers like a dart and hit the bull’s eye.<br> <br>
 
-Whether you’re a nascent, unbranded start-up or an established organization looking to advertise your product / service in a television advertisement, then look to us. We can take your requirement and amplify it with your message to your targeted audience. The aim is to express the campaign intentions creatively and effectively, prompting customer’s reactions.</p>
+Visually appealing designs, heart -touching expressions and right words have attracted thousands of customers over a period of time. <br><br>
+
+
+Abhinandana Media Services perfectly understands the ever growing needs of your business, devises a marketing strategy for print media and designs stunning advertisements to reach the target audience.<br> <br>
+
+
+Excellent layout of the advertisement with precise content and attractive visuals draw the attention of target people and turn them into your potential customers.<br><br>
+
+
+Our expert designers can create ads for the page you want and the section you choose in any national or state level newspaper or magazine within a few days. <br> <br>
+
+
+Abhinandana Media Services with its holistic approach and fully integrated capabilities provides a range of quality newspaper and magazine advertisement solutions. Our understanding of the customer behavior for over two decades can help you in designing ads that reach the target customers effectively. 
+<br><br>
+</p>
              
 
       </div> </div>
@@ -2033,7 +1974,7 @@ If you’re looking to have a billboard / hoarding advertisement in a particular
     </section>
 </section>
 
-<section class="probootstrap_section" id="section-acheivement">
+<!--<section class="probootstrap_section" id="section-acheivement">
       <div class="container">
         <div class="row text-center mb-5 probootstrap-animate">
           <div class="col-md-12  mx-auto ">
@@ -2046,11 +1987,11 @@ If you’re looking to have a billboard / hoarding advertisement in a particular
     <section class="probootstrap-section-half d-md-flex">
 
 
-      <div class="probootstrap-inner probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(assets/images/ins.png)"></div>
+      <<div class="probootstrap-inner probootstrap-image probootstrap-animate" data-animate-effect="fadeIn" style="background-image: url(assets/images/ins.png)"></div>
       <div class="probootstrap-text">
         <div class="probootstrap-inner probootstrap-animate" data-animate-effect="fadeInRight">
           <h2 class="heading mb-4" style="color: #000080" ;><b>INS</b></h2>
-          <p class="lead mb-4" align="justify " style="color: black">An advertising agency, often referred to as a creative agency, is a business dedicated to creating, planning, and handling advertising and sometimes other forms of promotion and marketing for its clients. An ad agency is generally independent from the client.  </p>
+          <p class="lead mb-4" align="justify " style="color: black">An advertising agency, often referred to as a creative agency, is a business dedicated to creating, planning, and handling advertising and sometimes other forms of promotion and marketing for its clients. An ad agency is generally independent from the client.  </p-->
 
 
 
@@ -2377,10 +2318,6 @@ Bhimavaram, Andhra Pradesh, India.</p>
             $('#bootstrap-touch-slider').bsTouchSlider();
         </script>
         
-<script>
-  /* Initiate Magnify Function
-  with the id of the image, and the strength of the magnifier glass:*/
-  magnify("myimage", 3);
-  </script>
+
 	</body>
 </html>
